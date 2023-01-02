@@ -8,7 +8,10 @@ import retrofit2.http.*
 interface ApiEndpoint {
 
     @GET("todo")
-    fun getMock(): Call<ResponseMock>
+    fun getMock(
+        @Query("complete") complete: Boolean? = null,
+        @Query("title") title: String? = null
+    ): Call<ResponseMock>
 
     @POST("todo")
     fun postMock(
@@ -26,13 +29,13 @@ interface ApiEndpoint {
         @Path("id") id: String
     ):Call<ResponseMock>
 
-
-    @POST("todo")
-    fun postMock(
-        @Field("title") title: String,
-        @Field("complete") complete: Boolean,
-        @Field("content") content: String,
-    ): Call<ResponseMock>
+//
+//    @POST("todo")
+//    fun postMock(
+//        @Field("title") title: String,
+//        @Field("complete") complete: Boolean,
+//        @Field("content") content: String,
+//    ): Call<ResponseMock>
 
 
 

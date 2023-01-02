@@ -20,7 +20,7 @@ data class DataItem(
 	val title: String? = null,
 
 	@field:SerializedName("complete")
-	val complete: Boolean? = null,
+	val complete: Boolean,
 
 	@field:SerializedName("content")
 	val content: String? = null

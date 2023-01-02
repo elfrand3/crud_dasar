@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">crud_dasar</string>
+    <string-array name="isComplete">
+        <item>select...</item>
+        <item>true</item>
+        <item>false</item>
+    </string-array>
 </resources>

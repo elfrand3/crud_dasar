@@ -26,6 +26,7 @@ class MockAdapter (private var listData:  ArrayList<DataItem>):
     class myviewHolder (itemView: View ) : RecyclerView.ViewHolder(itemView){
         val tl : TextView = itemView.findViewById(R.id.tv_title)
         val ct : TextView = itemView.findViewById(R.id.tv_content)
+        val cm : TextView = itemView.findViewById(R.id.tv_complete)
         val sampah : ImageView = itemView.findViewById(R.id.delete)
         val update : Button = itemView.findViewById(R.id.update)
 
@@ -35,13 +36,19 @@ class MockAdapter (private var listData:  ArrayList<DataItem>):
         val view = LayoutInflater.from(parent.context).inflate(R.layout.list_item,parent,false)
         return myviewHolder(view)
 
-
     }
 
     override fun onBindViewHolder(holder: myviewHolder, position: Int) {
         val data = listData[position]
         holder.tl.text = data.title
         holder.ct.text = data.content
+        var isComplete = ""
+        isComplete = if (data.complete){
+            "true"
+        }else{
+            "false"
+        }
+        holder.cm.text = isComplete
 //        holder.pr.text = data.price.toString()
 //        Glide.with(holder.itemView)
 //            .load("${data.thumbnail}")

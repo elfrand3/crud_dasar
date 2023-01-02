@@ -21,6 +21,12 @@
             android:text="Content"
             android:textSize="14sp"
             android:id="@+id/tv_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Complete"
+            android:textSize="14sp"
+            android:id="@+id/tv_complete"/>
 
         <ImageView
             android:src="@drawable/ic_sampah"
