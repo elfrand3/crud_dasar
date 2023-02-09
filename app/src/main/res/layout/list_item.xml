@@ -7,27 +7,27 @@
     android:orientation="vertical">
 
         <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Title"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:id="@+id/tv_title"
-                    android:layout_weight="1"/>
+            android:text="Title"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:id="@+id/tv_title"
+            android:layout_weight="1"/>
 
-                <TextView
-                    android:gravity="center"
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:text="true"
-                    android:textSize="14sp"
-                    android:id="@+id/tv_complete"/>
-        </LinearLayout>
+        <TextView
+            android:gravity="center"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="true"
+            android:textSize="14sp"
+            android:id="@+id/tv_complete"/>
+</LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
