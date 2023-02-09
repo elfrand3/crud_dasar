@@ -96,58 +96,58 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getMock() {
-//        binding.spinner.onItemSelectedListener = object : OnItemSelectedListener{
-//            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-//                when(p2){
-//                    0 -> {
-//                        ApiMock.endpoint.getMock().enqueue(object : Callback<ResponseMock> {
-//                            override fun onResponse(call: Call<ResponseMock>, response: Response<ResponseMock>) {
-//                                if(response.isSuccessful){
-//                                    val responseMock:ResponseMock? = response.body()
-//                                    onResultData(responseMock!!)
-//                                }
-//                            }
-//
-//                            override fun onFailure(call: Call<ResponseMock>, t: Throwable) {
-//                            }
-//
-//                        })
-//                    }
-//                    1 -> {
-//                        ApiMock.endpoint.getMock(true,).enqueue(object : Callback<ResponseMock> {
-//                            override fun onResponse(call: Call<ResponseMock>, response: Response<ResponseMock>) {
-//                                if(response.isSuccessful){
-//                                    val responseMock:ResponseMock? = response.body()
-//                                    onResultData(responseMock!!)
-//                                }
-//                            }
-//
-//                            override fun onFailure(call: Call<ResponseMock>, t: Throwable) {
-//                            }
-//
-//                        })
-//                    }
-//                    2 -> {
-//                        ApiMock.endpoint.getMock(false).enqueue(object : Callback<ResponseMock> {
-//                            override fun onResponse(call: Call<ResponseMock>, response: Response<ResponseMock>) {
-//                                if(response.isSuccessful){
-//                                    val responseMock:ResponseMock? = response.body()
-//                                    onResultData(responseMock!!)
-//                                }
-//                            }
-//
-//                            override fun onFailure(call: Call<ResponseMock>, t: Throwable) {
-//                            }
-//
-//                        })
-//                    }
-//                }
-//            }
-//
-//            override fun onNothingSelected(p0: AdapterView<*>?) {
-//
-//            }
-//        }
+        binding.spinner.onItemSelectedListener = object : OnItemSelectedListener{
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                when(p2){
+                    0 -> {
+                        ApiMock.endpoint.getMock().enqueue(object : Callback<ResponseMock> {
+                            override fun onResponse(call: Call<ResponseMock>, response: Response<ResponseMock>) {
+                                if(response.isSuccessful){
+                                    val responseMock:ResponseMock? = response.body()
+                                    onResultData(responseMock!!)
+                                }
+                            }
+
+                            override fun onFailure(call: Call<ResponseMock>, t: Throwable) {
+                            }
+
+                        })
+                    }
+                    1 -> {
+                        ApiMock.endpoint.getMock(true,).enqueue(object : Callback<ResponseMock> {
+                            override fun onResponse(call: Call<ResponseMock>, response: Response<ResponseMock>) {
+                                if(response.isSuccessful){
+                                    val responseMock:ResponseMock? = response.body()
+                                    onResultData(responseMock!!)
+                                }
+                            }
+
+                            override fun onFailure(call: Call<ResponseMock>, t: Throwable) {
+                            }
+
+                        })
+                    }
+                    2 -> {
+                        ApiMock.endpoint.getMock(false).enqueue(object : Callback<ResponseMock> {
+                            override fun onResponse(call: Call<ResponseMock>, response: Response<ResponseMock>) {
+                                if(response.isSuccessful){
+                                    val responseMock:ResponseMock? = response.body()
+                                    onResultData(responseMock!!)
+                                }
+                            }
+
+                            override fun onFailure(call: Call<ResponseMock>, t: Throwable) {
+                            }
+
+                        })
+                    }
+                }
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+
+            }
+        }
     }
 
     private fun onResultData(responseMock: ResponseMock) {

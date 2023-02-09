@@ -33,37 +33,49 @@
     </com.facebook.shimmer.ShimmerFrameLayout>
 
     <LinearLayout
-        android:id="@+id/id_search"
+        android:id="@+id/ly_top"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="horizontal">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/edt_text"
-            android:layout_weight="1"/>
-        <Button
-            android:id="@+id/btn_search"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
+
+        <LinearLayout
             android:layout_weight="1"
-            android:text="submit" />
+            android:id="@+id/id_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search"
+                android:text="submit" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/edt_text"/>
+
+        </LinearLayout>
+
+        <Spinner
+            android:layout_gravity="center_vertical"
+            android:id="@+id/spinner"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/isComplete"/>
+
     </LinearLayout>
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:entries="@array/isComplete"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/id_search"/>
-
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_marginTop="2dp"
         android:id="@+id/id_refresh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -71,7 +83,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spinner">
+        app:layout_constraintTop_toBottomOf="@id/ly_top">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_list"

@@ -27,7 +27,7 @@ class MockAdapter (private var listData:  ArrayList<DataItem>):
         val tl : TextView = itemView.findViewById(R.id.tv_title)
         val ct : TextView = itemView.findViewById(R.id.tv_content)
         val cm : TextView = itemView.findViewById(R.id.tv_complete)
-        val sampah : ImageView = itemView.findViewById(R.id.delete)
+        val sampah : Button = itemView.findViewById(R.id.delete)
         val update : Button = itemView.findViewById(R.id.update)
 
     }
