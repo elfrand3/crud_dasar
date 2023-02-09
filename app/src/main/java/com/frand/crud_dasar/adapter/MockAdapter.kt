@@ -1,6 +1,7 @@
 package com.frand.crud_dasar.adapter
 
 import android.content.Intent
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -42,13 +43,15 @@ class MockAdapter (private var listData:  ArrayList<DataItem>):
         val data = listData[position]
         holder.tl.text = data.title
         holder.ct.text = data.content
-        var isComplete = ""
-        isComplete = if (data.complete){
-            "true"
+        if (data.complete){
+            holder.cm.text = "true"
+            holder.cm.setTextColor(Color.YELLOW)
+            holder.cm.setBackgroundColor(Color.BLUE)
         }else{
-            "false"
+            holder.cm.text = "false"
+            holder.cm.setTextColor(Color.BLUE)
+            holder.cm.setBackgroundColor(Color.YELLOW)
         }
-        holder.cm.text = isComplete
 //        holder.pr.text = data.price.toString()
 //        Glide.with(holder.itemView)
 //            .load("${data.thumbnail}")

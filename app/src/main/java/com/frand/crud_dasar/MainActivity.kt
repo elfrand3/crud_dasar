@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
         rv_list.adapter = MockAdapter
         getMock()
 
+
         binding.btnSearch.setOnClickListener {
             if (binding.edtText.text.isEmpty()){
                 Toast.makeText(this, "search...", Toast.LENGTH_SHORT).show()
